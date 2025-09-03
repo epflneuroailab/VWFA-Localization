@@ -47,7 +47,7 @@ torch.backends.cudnn.benchmark = False
 # ==============================
 SAVE_PATH = "./saved_model"
 SAVE_DIR = "./activations"
-LI_DIR = "../vwfa/VWFA_localizer_contrast_classes"
+LI_DIR = "./VWFA_localizer_contrast_classes"
 
 os.makedirs(SAVE_DIR, exist_ok=True)
 
