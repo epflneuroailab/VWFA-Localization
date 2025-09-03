@@ -33,7 +33,7 @@ torch.cuda.manual_seed_all(base_seed)
 os.environ["PYTHONHASHSEED"] = str(base_seed)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
-st.seed = base_seed  # Note: SciPy doesn't have a true seed, but we leave it for clarity
+st.seed = base_seed  
 
 sns.set_theme()
 plt.rcParams["axes.prop_cycle"] = plt.cycler(color=sns.color_palette("deep"))
@@ -158,9 +158,9 @@ def apply_noise_with_mask(model, mask):
 hooks = apply_noise_with_mask(model, mask)
 
 # ------------------ Process Images ------------------ #
-image_dir = "/mnt/honarman/dyslexia-project-main/stimuli/roar-test-80-20"
+image_dir = "./Roar/roar-test-80-20"
 image_filenames_all = sorted([f for f in os.listdir(image_dir) if f.endswith('.png')])
-ground_truth_file = "/mnt/honarman/dyslexia-project-main/stimuli/roar-stimuli-1/roar-500-word-list.csv"
+ground_truth_file = "./Roar/roar-500-word-list.csv"
 ground_truth = load_ground_truth(ground_truth_file)
 
 accuracies = []
