@@ -44,7 +44,6 @@ idx = args.idx
 percentage = args.percentage
 
 # ------------------ Config ------------------
-unique = True
 vision = False
 ZO = True
 sample_number = 80
@@ -65,7 +64,7 @@ os.makedirs(RESULTS_PATH, exist_ok=True)
 
 file_path = os.path.join(
     RESULTS_PATH,
-    f"KSCT_v1_noCap_Results_noised_{percentage}_{multiple}times_what_rate.txt"
+    f"KSCT_v1_noCap_Results_noised_{percentage}%.txt"
 )
 
 # ------------------ Model ------------------
